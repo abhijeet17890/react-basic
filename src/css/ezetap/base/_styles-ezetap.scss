@@ -1,0 +1,173 @@
+/*
+    =====================================================================================
+
+    FFFE — FICTOAN Framework for Ezetap
+    This is a customised version of the FICTOAN Framework, made just for Ezetap.
+
+    FFFE v0.5.0
+
+    Enjoy responsibly, many projects depend on this.
+
+    =====================================================================================
+*/
+
+/* == ESSENTIALS ======================================================================== */
+
+@font-face {
+    font-family : "Atlas Grotesk";
+    font-weight : 300;
+    src         : url("../../../fonts/AtlasGrotesk-Regular-Web.woff") format("woff"),
+                  url("../../../fonts/AtlasGrotesk-Regular-Web.woff2") format("woff2");
+}
+
+@font-face {
+    font-family : "Atlas Grotesk";
+    font-weight : 600;
+    src         : url("../../../fonts/AtlasGrotesk-Bold-Web.woff") format("woff"),
+                  url("../../../fonts/AtlasGrotesk-Bold-Web.woff2") format("woff2");
+}
+
+@font-face {
+    font-family : "Atlas Typewriter";
+    font-weight : 300;
+    src         : url("../../../fonts/AtlasTypewriter-Regular-Web.woff") format("woff"),
+                  url("../../../fonts/AtlasTypewriter-Regular-Web.woff2") format("woff2");
+}
+
+@font-face {
+    font-family : "Atlas Typewriter";
+    font-weight : 600;
+    src         : url("../../../fonts/AtlasTypewriter-Bold-Web.woff") format("woff"),
+                  url("../../../fonts/AtlasTypewriter-Bold-Web.woff2") format("woff2");
+}
+
+body, p {
+    font-family : "Atlas Grotesk", sans-serif;
+    font-weight : 300;
+    font-size   : 1em;
+    line-height : 2em;
+}
+
+b, strong { font-weight : 600; }
+
+a {
+    cursor        : pointer;
+    color         : $colorHue;
+    font-weight   : 600;
+    border-bottom : $colorHue;
+    transition    : all 0.2s;
+}
+
+.text-sans { font-family : $fontSans; }
+.text-serif { font-family : $fontSerif; }
+.text-mono { font-family : $fontMono; }
+
+.text-mono strong {
+    font-family : "Atlas Typewriter", monospace;
+    font-weight : 600;
+}
+
+
+
+
+/* == CODE ================================================================= */
+
+code {
+    background-color : $codeBgColor;
+    font-family      : $fontMono;
+    font-size        : 12px;
+    color            : $codeColor;
+    white-space      : pre;
+    margin           : 0;
+    border-radius    : 4px;
+}
+
+code.inline {
+    margin  : 0 2px;
+    padding : 2px 6px;
+}
+
+pre > code {
+    display        : block;
+    white-space    : pre;
+    letter-spacing : -0.5px;
+    line-height    : 1.8em;
+}
+
+
+
+
+/* == BUTTONS ============================================================== */
+
+
+//  Basics
+.ff-button {
+    font-family : "Atlas Grotesk", sans-serif;
+    font-weight : 600;
+    color       : $colorWhite;
+    box-shadow  : 0 4px 24px -4px hsla(20, 10%, 30%, 0.36);
+}
+
+.ff-button.bg-ezeGradient {
+    background  : $colorHue;
+    background  : -webkit-linear-gradient(-45deg, $colorTint-2 0%, $colorHue 100%);
+    background  :    -moz-linear-gradient(-45deg, $colorTint-2 0%, $colorHue 100%);
+    background  :         linear-gradient(135deg, $colorTint-2 0%, $colorHue 100%);
+}
+
+.ff-button.bordered {
+    background : none;
+    border     : 2px solid $colorHue;
+    color      : $colorHue;
+}
+
+//  Only for inline icons
+.ff-button path { fill : $colorWhite; }
+
+.ff-button.no-bg path { fill : $colorShade; }
+
+.ff-button.disabled {
+    pointer-events : none;
+    box-shadow     : none;
+    background     : $colorMildGrey;
+}
+
+.ff-pill {
+    font-family : "Atlas Grotesk", sans-serif;
+    font-weight : 400;
+}
+
+
+
+
+/* ==  TOGGLES and RADIO BUTTONS =========================================== */
+
+.ff-checkbox input[type=checkbox]:checked + label.ff-checkbox-label { background : $colorHue; }
+
+.ff-radio input[type=radio]:checked + label.ff-radio-label { background : $colorHue; }
+
+
+
+
+/* ==  TAB BAR  ============================================================ */
+
+.ff-tab:checked + label {
+    color         : $colorHue;
+    font-family   : "AG-Bold", sans-serif;
+    border-bottom : 2px solid $colorHue;
+}
+
+
+/* ==  INPUTS  ============================================================= */
+
+.ff-input-unit > label { top : 0; }
+
+.ff-input:focus,
+.ff-input:active { border-bottom : $measureFixed/4 solid $colorTint-2; }
+
+.ff-input:focus + label,
+.ff-input:not(:placeholder-shown) + label {
+    top     : -$measureFixed*2.5;
+    opacity : 0.8;
+}
+

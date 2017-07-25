@@ -1,0 +1,22 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="linear-gradient" x1="18.23" y1="19.73" x2="3.3" y2="4.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a1a1a"/>
+      <stop offset="1" stop-color="#666"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="17.06" y1="17.56" x2="4.39" y2="4.89" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#29abe2"/>
+      <stop offset="0.99" stop-color="aqua"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="7.45" y1="9" x2="20.45" y2="9" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fcee21"/>
+      <stop offset="0.99" stop-color="#f73"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="11.33" y1="21.33" x2="9.73" y2="19.73" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>usp-updates</title>
+  <rect x="4" y="2" width="13" height="20" rx="1" ry="1" fill="url(#linear-gradient)"/>
+  <rect x="5" y="3" width="11" height="16" fill="url(#linear-gradient-2)"/>
+  <path d="M20.06,5H11.94A2.22,2.22,0,0,0,9.72,7.22v4.26L8.26,10a.44.44,0,0,0-.63.63l2.22,2.22a.45.45,0,0,0,.63,0l2.22-2.22a.44.44,0,1,0-.63-.63l-1.46,1.46V7.22a1.33,1.33,0,0,1,1.33-1.33h8.11a.44.44,0,1,0,0-.89Z" fill="url(#linear-gradient-3)"/>
+  <rect x="9" y="20" width="3" height="1" rx="0.5" ry="0.5" fill="url(#linear-gradient-4)"/>
+</svg>

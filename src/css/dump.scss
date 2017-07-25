@@ -1,0 +1,65 @@
+//  ==========================================================================
+//  DASHBOARD
+//  ==========================================================================
+
+.left-menu {
+    position : fixed;
+    left     : 0;
+    top      : 0;
+    height   : 100vh;
+}
+
+.left-menu a {
+    font-family   : "AG-Regular", sans-serif;
+    font-weight   : normal;
+    margin-bottom : $measureFixed*3;
+    transition    : all 0.4s;
+}
+
+.left-menu a:hover { border : none; }
+
+.dashboard-content {
+    position    : relative;
+    width       : calc(100% - 192px);
+    height      : 100vh;
+    margin-left : $measureFixed*24;
+    background  : $colorWhite;
+    box-shadow  : 8px 0 16px 8px rgba($colorBlack, 0.16);
+}
+
+.dashboard-content .content-tab {
+    opacity    : 0;
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    width      : 100%;
+    height     : 100%;
+    padding    : $measureFixed*3 $measureFixed*3 0 $measureFixed*3;
+    transition : opacity 0.2s;
+    z-index    : -5;
+}
+
+.content-tab.visible {
+    opacity : 1;
+    z-index : 500;
+}
+
+.ff-tab:checked + label.ff-tab-label {
+    font-family   : "AG-Regular", sans-serif;
+    color         : $colorShade;
+    border-bottom : 2px solid $colorShade;
+}
+
+.ff-button { font-family: "AG-Regular", sans-serif; }
+
+
+.usp-tiles p { line-height : 1.6em; }
+
+.button-next {
+    position : absolute;
+    bottom   : -32px;
+    right    : 24px;
+    margin   : 0;
+}
+
+#password-rules { display : none; }

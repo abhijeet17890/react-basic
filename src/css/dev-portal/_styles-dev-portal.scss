@@ -1,0 +1,404 @@
+//  ==========================================================================
+//  BASICS
+//  ==========================================================================
+
+
+//  Atlas Grotesk — for body and general copy
+@font-face {
+    font-family : "Atlas Grotesk";
+    font-weight : 200;
+    src         : url("../fonts/AtlasGrotesk-Light-Web.woff") format("woff"),
+                  url("../fonts/AtlasGrotesk-Light-Web.woff2") format("woff2");
+}
+
+@font-face {
+    font-family : "Atlas Grotesk";
+    font-weight : 400;
+    src         : url("../fonts/AtlasGrotesk-Regular-Web.woff") format("woff"),
+                  url("../fonts/AtlasGrotesk-Regular-Web.woff2") format("woff2");
+}
+
+@font-face {
+    font-family : "Atlas Grotesk";
+    font-style  : italic;
+    font-weight : 400;
+    src         : url("../fonts/AtlasGrotesk-RegularItalic-Web.woff") format("woff"),
+                  url("../fonts/AtlasGrotesk-RegularItalic-Web.woff2") format("woff2");
+}
+
+@font-face {
+    font-family : "Atlas Grotesk";
+    font-weight : 500;
+    src         : url("../fonts/AtlasGrotesk-Medium-Web.woff") format("woff"),
+                  url("../fonts/AtlasGrotesk-Medium-Web.woff2") format("woff2");
+}
+
+//  Atlas Typewriter — for code snippets
+@font-face {
+    font-family : "Atlas Typewriter";
+    font-weight : 300;
+    src         : url("../fonts/AtlasTypewriter-Light-Web.woff") format("woff"),
+                  url("../fonts/AtlasTypewriter-Light-Web.woff2") format("woff2");
+}
+
+@font-face {
+    font-family : "Atlas Typewriter";
+    font-weight : 400;
+    src         : url("../fonts/AtlasTypewriter-Regular-Web.woff") format("woff"),
+                  url("../fonts/AtlasTypewriter-Regular-Web.woff2") format("woff2");
+}
+
+@font-face {
+    font-family : "Atlas Typewriter";
+    font-weight : 500;
+    src         : url("../fonts/AtlasTypewriter-Medium-Web.woff") format("woff"),
+                  url("../fonts/AtlasTypewriter-Medium-Web.woff2") format("woff2");
+}
+
+body {
+    position       : relative;
+    min-height     : 100vh;
+    padding-bottom : 160px;
+}
+
+body, p {
+    font-family : "Atlas Grotesk", sans-serif;
+    font-weight : 400;
+    font-size   : 15px;
+    line-height : 24px;
+}
+
+b, strong { font-weight : 500; }
+
+a {
+    cursor        : pointer;
+    color         : $colorHue;
+    font-weight   : 500;
+    transition    : all 0.2s;
+}
+a:hover {
+    border-bottom : none;
+    opacity       : 0.64;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight : 500; }
+
+em {
+    font-family : "Atlas Grotesk", sans-serif;
+    font-style  : italic;
+}
+
+.text-sans { font-family : $fontSans; }
+.text-mono { font-family : $fontMono; }
+.text-mono strong {
+    font-family : "Atlas Typewriter", monospace;
+    font-weight : 500;
+}
+
+.text-light   { font-weight: 200; }
+.text-regular { font-weight: 400; }
+.text-medium  { font-weight: 500; }
+
+.ff-header .ff-pill {
+    display : inline-block;
+    width   : auto;
+}
+
+.nav-logo img,
+footer img { height : $measureFixed*3; }
+
+footer {
+    position   : absolute;
+    right      : 0;
+    bottom     : 0;
+    left       : 0;
+    background : $colorShade;
+    color      : $colorWhite;
+    border-top : 1px solid rgba($colorHue, 0.24);
+}
+
+footer a { color: $colorWhite; }
+
+a p { font-weight : normal; }
+
+.ff-checkbox input[type=checkbox]:checked + label { background : $colorAccent; }
+.ff-radio input[type=radio]:checked + label { background : $colorAccent; }
+
+
+.ff-tab-label { font-weight : 500; }
+
+.ff-sidebar ul a,
+.ff-sidebar ul label { opacity: 0.64; }
+
+
+.desaturate { filter : grayscale(100%); }
+
+
+
+//  ==========================================================================
+//  COMMON ELEMENTS
+//  ==========================================================================
+
+.top-viewport {
+    position   : absolute;
+    top        : 0;
+    width      : 100vw;
+    height     : 85vh;
+    background : $colorMildGrey;
+    z-index    : -5;
+}
+
+
+//  ==========================================================================
+//  HELP CENTRE
+//  ==========================================================================
+
+.count-comment {
+    position     : relative;
+    padding-left : 24px;
+    opacity      : 0.6;
+}
+.count-comment::before {
+    position : absolute;
+    top      : 3px;
+    left     : 0;
+    width    : 16px;
+    height   : 16px;
+    content  : url("./../icons/icon-comment.svg");
+    opacity  : 0.6;
+}
+
+
+
+//  ==========================================================================
+//  LANDING PAGE / LOG IN + SIGN UP
+//  ==========================================================================
+
+.hero-image {
+    position : absolute;
+    top      : 0;
+    right    : 10vw;
+    width    : 700px;
+    z-index  : -5;
+}
+
+@media only screen and (max-width : 1199px) {
+
+    .hero-image {
+        right   : 0;
+        opacity : 0.24;
+    }
+
+}
+
+.usp-tiles p { opacity: 0.64 }
+
+.customer-quote { position: relative; }
+.customer-quote:before {
+    position  : absolute;
+    content   : "”";
+    color     : $colorHue;
+    opacity   : 0.24;
+    font-size : 6em;
+    z-index   : -5;
+}
+
+#landing-page .customer-quote:before {
+    top       : $measureFixed*2;
+    left      : -$measureFixed;
+}
+
+#sign-up-page .customer-quote:before {
+    top       : -$measureFixed*8;
+    left      : -$measureFixed;
+}
+
+#testimonials p { line-height: 24px; }
+
+//  ==========================================================================
+//  HOME PAGE
+//  ==========================================================================
+
+.user-first_name { position: relative; }
+
+.user-first_name::after {
+    content  : url("./../icons/icon-chevron_down.svg");
+    position : absolute;
+    top      : 0;
+    right    : -$measureFixed*3;
+}
+
+.sidebar-logo {
+    width  : 180px;
+    margin : $measureFixed*5 auto;
+}
+
+.ff-sidebar a,
+.ff-sidebar label { box-shadow : inset 0 -1px darken($ff-sidebarBgColor, 6%); }
+
+.ff-sidebar a:hover,
+.ff-sidebar label:hover {
+    background : rgba($colorAccent, 0.64);
+    opacity    : 1;
+}
+
+.app-name::after {
+    display       : inline-block;
+    position      : absolute;
+    top           : 20px;
+    right         : 16px;
+    width         : 48px;
+    height        : 16px;
+    border-radius : 8px;
+    content       : "";
+    font-weight   : 500;
+    color         : white;
+    font-size     : 10px;
+    line-height   : 1.6;
+    text-align    : center;
+}
+
+.app-name.status-prod::after {
+    background-color : $colorGreen;
+    content          : "PROD";
+}
+
+.app-name.status-demo::after {
+    background-color : $colorYellow;
+    content          : "DEMO";
+}
+
+//  ===========================================================================
+//  API DOCS
+//  ===========================================================================
+
+
+//  BASICS ====================================================================
+
+#docs-page { background : rgba($colorMildGrey, 0.4); }
+
+#docs-page .ff-header {
+    width            : 100%;
+    position         : fixed;
+    z-index          : 1;
+    top              : 0;
+    left             : 0;
+}
+
+#docs-page .portion { min-height: 0; }
+
+
+//  TOC =======================================================================
+
+.js-toc ul,
+.js-toc li { list-style: none !important; }
+
+.js-toc {
+    position   : fixed;
+    left       : 0;
+    top        : $measureFixed*10;
+    width      : $measureFixed*25;
+    height     : 100%;
+    padding    : $measureFixed*2;
+    transition : all 0.4s;
+}
+
+.js-toc a:hover {
+    border  : none;
+    opacity : 0.64;
+}
+
+.js-toc > .toc-list > .toc-list-item { margin-bottom: $measureFixed*3; }
+
+.node-name--H3 {
+    text-transform : uppercase;
+    font-weight    : 500;
+}
+
+.node-name--H4,
+.node-name--H5,
+.node-name--H6 {
+    font-size   : 14px;
+    font-weight : 400;
+}
+
+.node-name--H5,
+.node-name--H6 { opacity: 0.72; }
+
+.is-active-link {
+    font-weight : 500 !important;
+    color       : $colorHue !important;
+    opacity     : 1;
+}
+.is-active-link::before {
+    height           : 24px;
+    background-color : $colorAccent;
+}
+
+.js-toc-content {
+    margin-left : 200px;
+    transition  : all 0.4s;
+}
+
+@media all and (max-width: 1199px) {
+
+    .js-toc { left: -260px }
+
+    .js-toc-content { margin-left : 0; }
+
+}
+
+
+//  CONTENT — COMMON ==========================================================
+
+#docs-page section > .row { margin-bottom: 0; }
+
+.api-copy { background-color: $colorWhite; }
+
+//.api-copy h4 { margin: 3vmax 0 1vmax 0; }
+//.api-copy h5 { margin: 2vmax 0 1vmax 0; }
+//.api-copy h6 { margin: 1vmax 0; }
+
+.api-code { background-color: $colorMildGrey; }
+
+    @media all and (max-width: 599px) {
+
+        .api-code::after {
+            display          : block;
+            content          : "";
+            height           : $measureFixed*2;
+            background-color : $colorWhite;
+        }
+
+    }
+
+.api-code code { background-color: inherit; }
+
+
+//  METHOD TABLE ==============================================================
+
+.method-table .row {
+    margin-bottom : 0;
+    padding       : $measureFixed*2 0;
+    border-bottom : 1px solid $colorMildGrey;
+}
+.method-table .row:nth-of-type(1) { border-top : 1px solid $colorMildGrey; }
+
+.method-table p {
+    font-size     : 13px;
+    margin-bottom : 0;
+}
+
+.method-table .one-fourth { padding: 0 $measureFixed; }
+
+.method-table .one-fourth > p {
+    font-family : "Atlas Typewriter", monospace;
+    font-weight : 500;
+    text-align  : right;
+}
+
+    @media all and (max-width: 599px) {
+
+        .method-table .one-fourth > p { text-align : left; }
+
+    }

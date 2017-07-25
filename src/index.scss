@@ -1,0 +1,50 @@
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 2.2.0
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+
+
+//  Normalize first ===========================================================
+@import "css/vendor/normalize";
+
+//  Variables next =================================================4===========
+@import "css/fictoan/base/variables-fictoan";
+@import "css/ezetap/base/variables-ezetap";
+@import "css/dev-portal/variables-dev-portal";
+
+//  The meat of the matter ====================================================
+//  Opinionated baseline rules
+@import "css/fictoan/base/reset-fictoan";
+
+//  Basics
+@import "css/fictoan/base/layout-fictoan";
+@import "css/fictoan/base/utilities-fictoan";
+
+//The FICTOAN buffet menu
+@import "css/fictoan/components/ff-responsiveness";
+@import "css/fictoan/components/ff-colours";
+@import "css/fictoan/components/ff-typography";
+@import "css/fictoan/components/ff-header";
+@import "css/fictoan/components/ff-inputs";
+@import "css/fictoan/components/ff-buttons";
+@import "css/fictoan/components/ff-sidebar";
+@import "css/fictoan/components/ff-tab-bar";
+@import "css/fictoan/components/ff-modal";
+@import "css/fictoan/components/ff-code-light";
+
+//  FICTOAN customized for Ezetap =============================================
+@import "css/ezetap/base/styles-ezetap";
+
+//  Other small plugins =======================================================
+//@import "vendor/new-moon";
+@import "css/vendor/tocbot";
+@import "css/vendor/styles";
+
+//  Project-specific rules =====================================================
+@import "css/dev-portal/styles-dev-portal";

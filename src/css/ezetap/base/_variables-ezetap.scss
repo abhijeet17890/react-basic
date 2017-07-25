@@ -1,0 +1,57 @@
+/*
+    =====================================================================================
+
+    FFFE — FICTOAN Framework for Ezetap
+    This is a customised version of the FICTOAN Framework, made just for Ezetap.
+
+    FFFE v0.2
+
+    Enjoy responsibly, many projects depend on this. Edit only these files —
+
+    — variables-ezetap.scss
+          This one has all the global variables for the project brand. Replace 'ezetap'
+          in the filename to the project you're working on. eg. If you're working on IOCL,
+          rename to 'variables-iocl.scss'.
+
+    — styles-ezetap.scss
+          Same as above, except that this file contains project-specific styling for
+          elements. eg. Airtel wants a specialised pricing table? Put it in here. Amazon
+          wants a custom product card? Put it in here. IOCL wants a fancy octagonal
+          popup? It'd be idiotic, but put it in here.
+
+    =====================================================================================
+*/
+
+/*  Variables customised for Ezetap  */
+
+/*  Hard-coded complementary colour scheme.
+    Remove what the brand doesn't need  */
+$colorTint-1  : hsl(  10,  20%,  95%); // Near—gray for backgrounds
+$colorTint-2  : hsl(  30, 100%,  70%); // Lighter version of main orange
+$colorHue     : hsl(  20, 100%,  60%); // Main Ezetap orange
+$colorShade   : hsl(  20,  10%,  30%); // For all text
+$colorAccent  : hsl( 175,  60%,  50%); // Teal — complementary colour
+
+$bodyBgColor     : $colorWhite;
+$bodyFontColor   : $colorShade;
+$linkColor       : $colorHue;
+$linkBorder      : 1px dotted $colorHue;
+$linkHoverBorder : 1px  solid $colorHue;
+
+$fontSans  : "Atlas Grotesk", sans-serif;
+$fontMono  : "Atlas Typewriter", monospace;
+
+/*  Colour of highlight and text colour
+    — for Firefox browsers  */
+::-moz-selection {
+    background : $colorHue;
+    color      : $colorWhite;
+}
+//  Same thing — for Webkit browsers
+::selection {
+    background : $colorHue;
+    color      : $colorWhite;
+}
+
+$codeColor   : $colorTeal-dark;
+$codeBgColor : rgba($colorMildGrey, 0.64);
